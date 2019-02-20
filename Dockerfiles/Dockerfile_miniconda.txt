@@ -1,0 +1,32 @@
+# Use an official Python runtime as a parent image
+FROM continuumio/miniconda3 
+
+# Maintainer
+MAINTAINER author_name_email_id
+
+# Copy the current directory content into the container at /Package
+COPY . /Package
+
+# Set the working directory to /app
+WORKDIR /Package
+
+# Install any prerequisites 
+# N/A
+
+# Setup package environment
+RUN conda install --yes --file requirements.txt
+
+# Activate conda environment for this package
+##RUN source activate python_template
+
+# Install dependencies
+# RUN conda install ...
+
+# Make port 80 available to the world outside the container
+EXPOSE 5000
+
+# Entrypoint in the container for present example
+# Launch Flask web server
+ENTRYPOINT ["python"]
+CMD ["app/server.py"]
+

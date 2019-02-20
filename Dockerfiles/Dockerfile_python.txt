@@ -1,0 +1,23 @@
+# Light weight base image
+FROM python:3
+
+# Maintainer
+MAINTAINER manoj.kumar.d@honeywell.com
+
+# Copy the current directory content into the container at /Package
+COPY . /Package
+
+# Install package requirements
+RUN pip install --no-cache -r /Package/requirements.txt
+
+
+# Set the working directory to /Package
+WORKDIR /Package
+
+# Make port 5000 available to the world outside the container
+EXPOSE 5000
+
+# Entry point in the container for present example -
+# Launch Flask web server
+ENTRYPOINT ["python"]
+CMD ["app/server.py"]
