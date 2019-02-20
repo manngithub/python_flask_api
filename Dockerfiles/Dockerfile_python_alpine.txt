@@ -2,7 +2,7 @@
 FROM python:3-alpine
 
 # Maintainer
-MAINTAINER manoj.kumar.d@honeywell.com
+MAINTAINER mann.dhiman@gmail.com
 
 # Copy the current directory content into the container at /Package
 COPY . /Package

@@ -2,7 +2,7 @@
 FROM continuumio/miniconda3 
 
 # Maintainer
-MAINTAINER author_name_email_id
+MAINTAINER mann.dhiman@gmail.com
 
 # Copy the current directory content into the container at /Package
 COPY . /Package
