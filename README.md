@@ -12,7 +12,7 @@ Keywords: Machine Learning, Python, Flask, Docker
 - app/server.py: execution of this file (starting the flask server) is the ENTRYPOINT in the docker image
 - model/model.pkl: serialized machine learning model that was saved after running app/model.py file
 - requirements.txt: package requirements that are installed while building the docker image
-- Dockerfiles/*: These dockerfiles are tested can serve as Dockerfile for building the image. Make sure to rename the file as Dockerfile without extension
+- Dockerfiles/*: These dockerfiles are tested and can serve as Dockerfile for building the image. Make sure to rename the file as Dockerfile without extension
 
 Rest of the files and directories are optional and could be utilized as per the breadth and complexity of the package.
 
