@@ -1,8 +1,8 @@
 # Deployment of Machine Learning Model as a REST API
 
-This template provides a basic structure of components for deploying a machine learning model as a REST API. A regression model is trained on publicly available dataset https://raw.githubusercontent.com/vyashemang/flask-salary-predictor/master/Salary_Data.csv that is salary earned as per years of work experience. This model is serialized as pickle file and made available for future use. A flask server is instantiated that accepts input data (years of experience) and provides prediction of salary using the trained model pickle file. Further, the deployment framework is extended to generate interactive documentation using Swagger. Finally, option to build a docker image is provided to containerize the underlying application.
+This template provides a basic structure of components for deploying a machine learning model as a REST API. A regression model is trained on publicly available dataset https://raw.githubusercontent.com/vyashemang/flask-salary-predictor/master/Salary_Data.csv that is salary earned as per years of work experience. This model is serialized as pickle file and made available for future use. A flask server is instantiated that accepts input data (years of experience) and provides prediction of salary using the trained model pickle file. Finally, option to build a docker image is provided to containerize the underlying application.
 
-Keywords: Machine Learning, Python, Flask, Swagger, Docker
+Keywords: Machine Learning, Python, Flask, Docker
 
 ### Package Directory
 ![Directory Hierarchy](./data/Directory_Hierarchy.png)
@@ -48,8 +48,8 @@ $ docker run -it -p 5000:5000 <IMAGE ID>
 This will start the container as well as start the flask server
 
 3. Start Postman 
-- URL: http://localhost:5000/predictions
-- Body: [{"Experience":1.8}] 
+- URL: http://localhost:5000/api
+- Body: {"exp":1.8}
 
 4. (If not using Postman, then open a new window in terminal)
 ```sh
